@@ -1,0 +1,14 @@
+{
+	"id": "hitokoto",
+	"version": "1.0.0",
+	"name": "hitokoto",
+	"description": {
+		"en_us": "Hitokoto!",
+		"zh_cn": "一言！"
+	},
+	"author": [
+		"Fallen_Breath",
+		"Polaris_Light"
+	],
+	"link": "https://github.com/FDCraft/Hitokoto_plugin"
+}
