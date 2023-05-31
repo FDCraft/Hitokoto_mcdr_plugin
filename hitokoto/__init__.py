@@ -29,7 +29,7 @@ def get_hitokoto(url):
     json_string = urllib.request.urlopen(url, timeout=30).read().decode('UTF-8', 'strict')
     map = json.loads(json_string)
     who = '未知' if map['from_who'] is None else map['from_who']
-    hitokoto = '{}——{} {}'.format(map['hitokoto'], who, map['from'])
+    hitokoto = '§b[一言]§r{}——{} {}'.format(map['hitokoto'], who, map['from'])
     return hitokoto
 
 
