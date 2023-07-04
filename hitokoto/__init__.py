@@ -26,7 +26,17 @@ def get_url():
     return url
 
 def get_hitokoto(url): 
-    json_string = urllib.request.urlopen(url, timeout=30).read().decode('UTF-8', 'strict')
+
+    try:
+        json_string = urllib.request.urlopen(url, timeout=30).read().decode('UTF-8', 'strict')
+    except urllib.error.HTTPError as error:
+        if error.code == 403:
+            return '§b请求被限制了喵！'
+        else:
+            return '§b请求失败了喵！'
+    except urllib.error.URLError:
+        return '§b网络连接错误，请检查网络设置喵！'
+
     map = json.loads(json_string)
     who = '未知' if map['from_who'] is None else map['from_who']
     hitokoto = '§b[一言]§r{}——{} {}'.format(map['hitokoto'], who, map['from'])
