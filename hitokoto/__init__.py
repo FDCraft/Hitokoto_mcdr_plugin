@@ -2,6 +2,7 @@ import json
 import os
 from typing import List, Callable, Any
 import urllib.request
+import urllib.error
 
 
 from mcdreforged.api.all import *
