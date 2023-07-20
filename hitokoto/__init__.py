@@ -17,7 +17,7 @@ class Config(Serializable):
 
 Prefix = '!!hitokoto'
 config: Config
-ConfigFilePath = os.path.join('config', 'kitokoto.json')
+ConfigFilePath = os.path.join('config', 'hitokoto.json')
 
 
 def get_url():
